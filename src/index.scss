@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Cairo:wght@200..1000&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Cairo:wght@200..1000&family=Nanum+Myeongjo&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Rye&display=swap');
+
+
+// fonts
+$default-font : 'Nunito Sans';
+$heading-font : 'Nanum Myeongjo';
+
+// colors
+$main-color : #E8BF96;
+
+
+*{
+    font-family: $default-font;
+}
+
+.hhhhh{
+    height:calc(100vh - 20vh) ;
+}
+
+
+
+.headingFont{
+    font-family: $heading-font;
+}
+
+
+.h{
+    height: -webkit-fill-available;
+}
+
+
+
+
+
+
