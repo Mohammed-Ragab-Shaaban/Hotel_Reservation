@@ -57,7 +57,7 @@ export default function Footer() {
             </span>
           </div>
 
-          <div className=" flex justify-between items-center border-t py-3">
+          <div className=" flex justify-between items-center border-t py-8">
             <span>© Luxestay. All Rights Reserved.</span>
             <span>Privacy Policy</span>
           </div>

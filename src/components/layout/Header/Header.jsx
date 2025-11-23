@@ -23,30 +23,46 @@ export default function Header() {
   const split_prag_Ref = useRef(null);
 
   const spliting = useGSAP(() => {
-    if (split_heading_Ref.current) {
-      let split_heading = SplitText.create(split_heading_Ref.current, {
-        type: "words,chars",
-      });
-      gsap.from(split_heading.chars, {
-        x: 200,
-        autoAlpha: 0,
-        stagger: 0.15,
-      });
-      return () => split_heading.revert();
+    if (document.fonts) {
+      document.fonts.ready
+        .then(() => {
+          if (split_heading_Ref.current) {
+            let split_heading = SplitText.create(split_heading_Ref.current, {
+              type: "words,chars",
+            });
+            gsap.from(split_heading.chars, {
+              x: 200,
+              autoAlpha: 0,
+              stagger: 0.15,
+            });
+            return () => split_heading.revert();
+          }
+        })
+        .catch((err) => {
+          console.error("Error waiting for fonts:", err);
+        });
     }
   }, []);
 
   const spliting_prag = useGSAP(() => {
-    if (split_prag_Ref.current) {
-      let split_prag = SplitText.create(split_prag_Ref.current, {
-        type: "words,chars",
-      });
-      gsap.from(split_prag.chars, {
-        x: 200,
-        autoAlpha: 0,
-        stagger: 0.15,
-      });
-      return () => split_prag.revert();
+    if (document.fonts) {
+      document.fonts.ready
+        .then(() => {
+          if (split_prag_Ref.current) {
+            let split_prag = SplitText.create(split_prag_Ref.current, {
+              type: "words,chars",
+            });
+            gsap.from(split_prag.chars, {
+              x: 200,
+              autoAlpha: 0,
+              stagger: 0.15,
+            });
+            return () => split_prag.revert();
+          }
+        })
+        .catch((err) => {
+          console.error("Error waiting for fonts:", err);
+        });
     }
   }, []);
 

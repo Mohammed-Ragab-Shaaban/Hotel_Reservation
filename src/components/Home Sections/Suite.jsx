@@ -22,25 +22,33 @@ export function Suite() {
   const textEffectRef = useRef(null);
 
   useGSAP(() => {
-    if (textEffectRef.current) {
-      let split = SplitText.create(textEffectRef.current, {
-        type: "words,chars",
-      });
-      // let split = new SplitText(textEffectRef.current, { type: 'words,chars' });
-      gsap.from(split.chars, {
-        scrollTrigger: {
-          trigger: textEffectRef.current,
-          // toggleActions: "restart pause reverse none",
-          start: "top 80%",
-          end: "+=300",
-          // markers:true,
-          scrub: true,
-        },
-        x: 5,
-        autoAlpha: 0.1,
-        stagger: 0.05,
-      });
-      return () => split.revert();
+    if (document.fonts) {
+      document.fonts.ready
+        .then(() => {
+          if (textEffectRef.current) {
+            let split = SplitText.create(textEffectRef.current, {
+              type: "words,chars",
+            });
+            // let split = new SplitText(textEffectRef.current, { type: 'words,chars' });
+            gsap.from(split.chars, {
+              scrollTrigger: {
+                trigger: textEffectRef.current,
+                // toggleActions: "restart pause reverse none",
+                start: "top 80%",
+                end: "+=300",
+                // markers:true,
+                scrub: true,
+              },
+              x: 5,
+              autoAlpha: 0.1,
+              stagger: 0.05,
+            });
+            return () => split.revert();
+          }
+        })
+        .catch((err) => {
+          console.error("Error waiting for fonts:", err);
+        });
     }
   }, []);
 

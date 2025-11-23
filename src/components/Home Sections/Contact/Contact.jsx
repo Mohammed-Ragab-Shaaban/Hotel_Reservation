@@ -14,24 +14,32 @@ export default function Contact() {
   };
 
   useGSAP(() => {
-    if (contact_h1_Ref.current) {
-      let contact_h1_split = SplitText.create(contact_h1_Ref.current, {
-        type: "words,chars",
-      });
-      console.log(contact_h1_split.chars);
-      console.log(contact_h1_split.words);
-      gsap.from(contact_h1_split.chars, {
-        scrollTrigger: {
-          trigger: contact_h1_Ref.current,
-          start: "top 80%",
-          end: "+=200",
-          scrub: true,
-        },
-        x: 200,
-        autoAlpha: 0,
-        stagger: 0.05,
-      });
-      return () => contact_h1_split.revert();
+    if (document.fonts) {
+      document.fonts.ready
+        .then(() => {
+          if (contact_h1_Ref.current) {
+            let contact_h1_split = SplitText.create(contact_h1_Ref.current, {
+              type: "words,chars",
+            });
+            console.log(contact_h1_split.chars);
+            console.log(contact_h1_split.words);
+            gsap.from(contact_h1_split.chars, {
+              scrollTrigger: {
+                trigger: contact_h1_Ref.current,
+                start: "top 80%",
+                end: "+=200",
+                scrub: true,
+              },
+              x: 200,
+              autoAlpha: 0,
+              stagger: 0.05,
+            });
+            return () => contact_h1_split.revert();
+          }
+        })
+        .catch((err) => {
+          console.error("Error waiting for fonts:", err);
+        });
     }
   }, []);
 
