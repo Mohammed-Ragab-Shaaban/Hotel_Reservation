@@ -11,9 +11,14 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import comfort_video from "../../assets/videos/comfort_video.mp4";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap/all";
+import gsap, { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
+
+// gsap.registerPlugin(useGSAP);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
 
 export function ComfortSwction() {
   const sty = {

@@ -12,6 +12,10 @@ import React, { useRef } from "react";
 
 // gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger, useGSAP);
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 export default function Footer() {
   const footerRef = useRef();

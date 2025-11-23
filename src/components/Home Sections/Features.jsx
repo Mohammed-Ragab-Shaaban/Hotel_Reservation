@@ -14,6 +14,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 // gsap.registerPlugin(useGSAP, ScrollTrigger);
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
+window.addEventListener("load", () => {
+  ScrollTrigger.refresh();
+});
+
 export function Features() {
   const style = {
     backgroundImage: `url(${featureImage})`,
