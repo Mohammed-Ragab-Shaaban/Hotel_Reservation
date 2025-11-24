@@ -86,8 +86,8 @@ export function ComfortSwction() {
       cc.add(
         {
           isMobile: "(max-width: 640px)",
-          isTablet: "(max-width: 768px)",
-          isDesktop: "(max-width: 1536px)",
+          isTablet: "(min-width: 641px) and (max-width: 1024px)",
+          isDesktop: "(min-width: 1025px)",
         },
         (context) => {
           let { isMobile, isTablet, isDesktop } = context.conditions;

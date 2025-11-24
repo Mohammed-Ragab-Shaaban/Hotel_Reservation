@@ -34,8 +34,8 @@ export function Features() {
     ff.add(
       {
         isMobile: "(max-width: 640px)",
-        isTablet: "(max-width: 768px)",
-        isDesktop: "(max-width: 1536px)",
+        isTablet: "(min-width: 641px) and (max-width: 1024px)",
+        isDesktop: "(min-width: 1025px)",
       },
       (context) => {
         let { isMobile, isTablet, isDesktop } = context.conditions;
@@ -56,7 +56,7 @@ export function Features() {
           });
           gsap.from(".left", {
             scrollTrigger: {
-              trigger: ".right",
+              trigger: ".left",
               // toggleActions: "restart pause reverse none",
               start: "top 80%",
               end: "+=100",
@@ -85,7 +85,7 @@ export function Features() {
           });
           gsap.from(".left", {
             scrollTrigger: {
-              trigger: ".right",
+              trigger: ".left",
               // toggleActions: "restart pause reverse none",
               start: "top 80%",
               end: "+=100",

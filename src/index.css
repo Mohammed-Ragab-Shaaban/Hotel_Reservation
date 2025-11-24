@@ -1,75 +1,63 @@
+@import "@fortawesome/fontawesome-svg-core/styles.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-
-.button-hover-slide-left::before{
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-width: 0;
-height: 100%;
-background-color: black;
-transition: width .5s ease-in-out;
-z-index: -1;
+.button-hover-slide-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: black;
+  transition: width 0.5s ease-in-out;
+  z-index: -1;
 }
 
-.button-hover-slide-left:hover::before{
-    width: 100%;
+.button-hover-slide-left:hover::before {
+  width: 100%;
 }
-
-
 
 @media only screen and (max-width: 1536px) {
-    .manualContainer {
-        width: calc(100% - 10%);
-        margin: auto;
-    }
+  .manualContainer {
+    width: calc(100% - 10%);
+    margin: auto;
+  }
 }
-
 
 @media only screen and (max-width: 1280px) {
-    .manualContainer {
-        width: calc(100% - 5%);
-        margin: auto;
-    }  
+  .manualContainer {
+    width: calc(100% - 5%);
+    margin: auto;
+  }
 }
 
-
 @media only screen and (max-width: 1024px) {
-    .manualContainer {
-        width: calc(100% - 5%);
-        margin: auto;
-        }
+  .manualContainer {
+    width: calc(100% - 5%);
+    margin: auto;
+  }
 }
 
 @media only screen and (max-width: 768px) {
-    .manualContainer {
-        width: calc(100% - 5%);
-        margin: auto;
-    }
-   
+  .manualContainer {
+    width: calc(100% - 5%);
+    margin: auto;
+  }
 }
 
 @media only screen and (max-width: 640px) {
-    .manualContainer {
-        width: calc(100% - 5%);
-        margin: auto;
-    } 
+  .manualContainer {
+    width: calc(100% - 5%);
+    margin: auto;
+  }
 }
 
-
-
 /* ////////////// */
-
-
-
-
