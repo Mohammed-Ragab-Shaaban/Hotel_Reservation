@@ -26,8 +26,8 @@ export default function Footer() {
         scrollTrigger: {
           trigger: ".theTrigger",
           start: "top 95%",
-          // end:"bottom bottom",
-          // end: "+=50",
+          // end: "bottom bottom",
+          end: "+=100",
           scrub: true,
         },
         y: 50,
@@ -43,17 +43,17 @@ export default function Footer() {
       <div className="manualContainer">
         <div>
           <div className="theTrigger text-center *:text-2xl flex gap-4 justify-center hover:*:text-second-color hover:*:cursor-pointer *:transition-all *:duration-500">
-            <span className="socialMediaIcon">
-              <FontAwesomeIcon icon={faFacebook} />
+            <span>
+              <FontAwesomeIcon icon={faFacebook} className="socialMediaIcon" />
             </span>
-            <span className="socialMediaIcon">
-              <FontAwesomeIcon icon={faInstagram} />
+            <span>
+              <FontAwesomeIcon icon={faInstagram} className="socialMediaIcon" />
             </span>
-            <span className="socialMediaIcon">
-              <FontAwesomeIcon icon={faLinkedin} />
+            <span>
+              <FontAwesomeIcon icon={faLinkedin} className="socialMediaIcon" />
             </span>
-            <span className="socialMediaIcon">
-              <FontAwesomeIcon icon={faXTwitter} />
+            <span>
+              <FontAwesomeIcon icon={faXTwitter} className="socialMediaIcon" />
             </span>
           </div>
 

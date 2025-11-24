@@ -22,7 +22,7 @@ export default function ContactUs() {
     gsap.from(".contact_us_top", {
       scrollTrigger: {
         trigger: ".contact_us_top",
-        start: "top 90%",
+        start: "top 80%",
         end: "+=50",
         scrub: true,
       },
@@ -33,7 +33,7 @@ export default function ContactUs() {
     gsap.from(".contact_us_bottom", {
       scrollTrigger: {
         trigger: ".contact_us_bottom",
-        start: "top 90%",
+        start: "top 80%",
         end: "+=50",
         scrub: true,
       },
@@ -46,7 +46,7 @@ export default function ContactUs() {
     gsap.from(".contact_us", {
       scrollTrigger: {
         trigger: ".contact_us",
-        start: "top 90%",
+        start: "top 80%",
         end: "+=50",
         scrub: true,
       },

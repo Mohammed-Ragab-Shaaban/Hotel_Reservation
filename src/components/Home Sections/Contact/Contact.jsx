@@ -26,7 +26,7 @@ export default function Contact() {
             gsap.from(contact_h1_split.chars, {
               scrollTrigger: {
                 trigger: contact_h1_Ref.current,
-                start: "top 80%",
+                start: "top 70%",
                 end: "+=200",
                 scrub: true,
               },
