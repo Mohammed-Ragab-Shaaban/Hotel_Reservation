@@ -27,7 +27,7 @@ export default function Footer() {
           trigger: ".theTrigger",
           start: "top 95%",
           // end:"bottom bottom",
-          end: "+=50",
+          // end: "+=50",
           scrub: true,
         },
         y: 50,
